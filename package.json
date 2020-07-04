@@ -1,0 +1,27 @@
+{
+  "name": "simpl",
+  "version": "0.1.0",
+  "description": "OCaml workflow with Esy",
+  "license": "MIT",
+  "esy": {
+    "build": "dune build -p #{self.name}",
+    "release": {
+      "bin": "simpl",
+      "includePackages": [
+        "root",
+        "@opam/camomile"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "esy x simpl"
+  },
+  "dependencies": {
+    "@opam/dune": "2.5.0",
+    "ocaml": "~4.8"
+  },
+  "devDependencies": {
+    "ocaml": "~4.8",
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#578749c"
+  }
+}

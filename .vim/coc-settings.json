@@ -1,0 +1,9 @@
+{
+  "languageserver": {
+    "ocaml-lsp": {
+      "command": "esy",
+      "args": ["x", "ocamllsp"],
+      "filetypes": ["ocaml", "reason"]
+    }
+  }
+}
