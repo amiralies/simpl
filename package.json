@@ -17,11 +17,12 @@
     "test": "esy x simpl"
   },
   "dependencies": {
-    "@opam/dune": "2.5.0",
-    "ocaml": "~4.8"
+    "@opam/dune": "2.6.0",
+    "ocaml": "~4.9"
   },
   "devDependencies": {
-    "ocaml": "~4.8",
+    "@opam/utop": "2.6.0",
+    "ocaml": "~4.9",
     "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#578749c"
   }
 }
