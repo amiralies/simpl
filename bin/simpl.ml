@@ -1,1 +1,1 @@
-let () =  (Lib.Simpl.hello ())
+let () =  print_endline "Simpl"
