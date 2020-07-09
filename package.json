@@ -23,6 +23,6 @@
   "devDependencies": {
     "@opam/utop": "2.6.0",
     "ocaml": "~4.9",
-    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#578749c"
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#efedf8d6a"
   }
 }

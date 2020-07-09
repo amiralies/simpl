@@ -1,5 +1,5 @@
 {
-  "checksum": "f35d4e3f31a1b7e3465a18bc1ed90372",
+  "checksum": "328634ed60a8e97dc1b577ce6c32d0c1",
   "root": "simpl@link-dev:./package.json",
   "node": {
     "simpl@link-dev:./package.json": {
@@ -17,7 +17,7 @@
       ],
       "devDependencies": [
         "ocaml@4.9.1000@d41d8cd9", "@opam/utop@opam:2.6.0@d5749530",
-        "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#578749c@d41d8cd9"
+        "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#efedf8d6a@d41d8cd9"
       ]
     },
     "ocaml@4.9.1000@d41d8cd9": {
@@ -360,12 +360,12 @@
       ],
       "dependencies": [
         "@opam/ocamlfind@opam:1.8.1@ff07b0f9",
-        "@opam/ocaml-secondary-compiler@opam:4.08.1-1@ba28931b",
+        "@opam/ocaml-secondary-compiler@opam:4.08.1-1@85df5d8f",
         "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
       "devDependencies": [
         "@opam/ocamlfind@opam:1.8.1@ff07b0f9",
-        "@opam/ocaml-secondary-compiler@opam:4.08.1-1@ba28931b"
+        "@opam/ocaml-secondary-compiler@opam:4.08.1-1@85df5d8f"
       ]
     },
     "@opam/ocamlfind@opam:1.8.1@ff07b0f9": {
@@ -424,8 +424,8 @@
       ],
       "devDependencies": [ "ocaml@4.9.1000@d41d8cd9" ]
     },
-    "@opam/ocaml-secondary-compiler@opam:4.08.1-1@ba28931b": {
-      "id": "@opam/ocaml-secondary-compiler@opam:4.08.1-1@ba28931b",
+    "@opam/ocaml-secondary-compiler@opam:4.08.1-1@85df5d8f": {
+      "id": "@opam/ocaml-secondary-compiler@opam:4.08.1-1@85df5d8f",
       "name": "@opam/ocaml-secondary-compiler",
       "version": "opam:4.08.1-1",
       "source": {
@@ -451,14 +451,16 @@
       ],
       "devDependencies": [ "ocaml@4.9.1000@d41d8cd9" ]
     },
-    "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#578749c@d41d8cd9": {
+    "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#efedf8d6a@d41d8cd9": {
       "id":
-        "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#578749c@d41d8cd9",
+        "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#efedf8d6a@d41d8cd9",
       "name": "@opam/ocaml-lsp-server",
-      "version": "github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#578749c",
+      "version": "github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#efedf8d6a",
       "source": {
         "type": "install",
-        "source": [ "github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#578749c" ]
+        "source": [
+          "github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#efedf8d6a"
+        ]
       },
       "overrides": [],
       "dependencies": [
@@ -711,7 +713,7 @@
         "@opam/result@opam:1.5@6b753c82",
         "@opam/ocplib-endian@opam:1.1@84c1ca88",
         "@opam/mmap@opam:1.1.0@b85334ff",
-        "@opam/dune-configurator@opam:2.6.1@0855a278",
+        "@opam/dune-configurator@opam:2.6.1@33e0efbb",
         "@opam/dune@opam:2.6.0@3a9808e6", "@opam/cppo@opam:1.6.6@f4f83858",
         "@opam/base-unix@opam:base@87d0b2eb",
         "@opam/base-threads@opam:base@36803084",
@@ -722,7 +724,7 @@
         "@opam/result@opam:1.5@6b753c82",
         "@opam/ocplib-endian@opam:1.1@84c1ca88",
         "@opam/mmap@opam:1.1.0@b85334ff",
-        "@opam/dune-configurator@opam:2.6.1@0855a278",
+        "@opam/dune-configurator@opam:2.6.1@33e0efbb",
         "@opam/dune@opam:2.6.0@3a9808e6"
       ]
     },
@@ -813,8 +815,8 @@
         "ocaml@4.9.1000@d41d8cd9", "@opam/dune@opam:2.6.0@3a9808e6"
       ]
     },
-    "@opam/dune-configurator@opam:2.6.1@0855a278": {
-      "id": "@opam/dune-configurator@opam:2.6.1@0855a278",
+    "@opam/dune-configurator@opam:2.6.1@33e0efbb": {
+      "id": "@opam/dune-configurator@opam:2.6.1@33e0efbb",
       "name": "@opam/dune-configurator",
       "version": "opam:2.6.1",
       "source": {
