@@ -5,6 +5,63 @@ let parse (s : string) : expr =
   let ast = Parser.prog Lexer.read lexbuf in
   ast
 
+type typ =
+  | TInt
+  | TBool
+
+module type TypeContext = sig
+  type t
+
+  val empty : t
+
+  val lookup : t -> string -> typ
+
+  val extend : t -> string -> typ -> t
+end
+
+module TypeContext : TypeContext = struct
+  type t = (string * typ) list
+
+  let empty = []
+
+  let lookup ctx x = (try List.assoc x ctx with Not_found -> failwith "unbound value")
+
+  let extend ctx x ty = (x, ty) :: ctx
+end
+
+let rec typeof ctx = function
+  | Int _ -> TInt
+  | Bool _ -> TBool
+  | Var x -> TypeContext.lookup ctx x
+  | Let (x, e1, e2) -> typeof_let ctx x e1 e2
+  | Binop (bop, e1, e2) -> typeof_bop ctx bop e1 e2
+  | If (e1, e2, e3) -> typeof_if ctx e1 e2 e3
+
+and typeof_let ctx x e1 e2 =
+  let t1 = typeof ctx e1 in
+  let ctx' = TypeContext.extend ctx x t1 in
+  typeof ctx' e2
+
+and typeof_bop ctx bop e1 e2 =
+  let (t1, t2) = (typeof ctx e1, typeof ctx e2) in
+  match (bop, t1, t2) with
+  | (Add, TInt, TInt) -> TInt
+  | (Mult, TInt, TInt) -> TInt
+  | (Leq, TInt, TInt) -> TBool
+  | _ -> failwith "Operator and operand type mismatch"
+
+and typeof_if ctx e1 e2 e3 =
+  if typeof ctx e1 = TBool then
+    let (t2, t3) = (typeof ctx e2, typeof ctx e3) in
+    if t2 = t3 then
+      t3
+    else
+      failwith "If branches must have the same type"
+  else
+    failwith "Guard must be a boolean"
+
+let typecheck e = ignore (typeof TypeContext.empty e)
+
 let is_value : expr -> bool = function
   | Int _
   | Bool _ ->
